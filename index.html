@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simón Dice</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <img src="Simon Dice.png">
+  </header>
+  <div class="container">
+    <div class="stats">
+      <p><strong>Level: </strong><span id="level-display">0</span></p>
+      <p><strong>Time: </strong><span id="timer-display">0</span>s</p>
+      <p><strong>Score: </strong><span id="score-display">0</span></p>
+    </div>
+    <div class="simon-board">
+      <div id="green" class="simon-button"></div>
+      <div id="red" class="simon-button"></div>
+      <div id="blue" class="simon-button"></div>
+      <div id="yellow" class="simon-button"></div>
+    </div>
+    <button id="start-button" class="start-button">START</button>
+    <button id="start-button" class="start-button">
+      <a href="https://github.com/Gabriel-Andres-Luna/Simon-dice" target="_blank">GITHUB</a>
+    </button>
+    <button id="start-button" class="start-button">
+      <a href="fomr.html">CONTACT</a>
+    </button>
+    <button id="start-button" class="start-button">DASHBOARD</button>
+  </div>
+  <div id="userModal" class="userModal">
+    <div class="usermodal-content">
+      <span class="close">&times;</span>
+      <label for="playerName"><strong>Username:</strong></label>
+      <input type="text" id="playerName" maxlength="20">
+      <button id="btnUser">DONE</button>
+    </div>
+  </div>
+  <div id="lossModal" class="lossModal">
+    <div class="lossModal-content">
+      <h2>¡Perdiste!</h2>
+      <p><strong>Usuario:</strong> <span id="modal-username"></span></p>
+      <p><strong>Nivel:</strong> <span id="modal-level"></span></p>
+      <p><strong>Tiempo:</strong> <span id="modal-time"></span>s</p>
+      <p><strong>Puntaje:</strong> <span id="modal-score"></span></p>
+      <button id="btnOk">OK</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
