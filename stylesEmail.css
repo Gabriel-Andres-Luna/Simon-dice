@@ -1,9 +1,11 @@
+/* Estilos generales */
 body {
   font-family: Arial, sans-serif;
-  background-color: #000000;
+  background-color: #000;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  color: #fff;
 }
 
 .header {
@@ -11,14 +13,13 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #82a8f300;
-  color: #ffffff;
+  color: #fff;
   padding: 20px;
   font-size: 28px;
 }
 
 h1 {
   text-align: center;
-  color: #ffffff;
   margin-top: -5px;
 }
 
@@ -26,7 +27,6 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #ffffff;
   max-width: 400px;
   margin: 0 auto;
 }
@@ -46,7 +46,8 @@ textarea {
   background-color: #cad2db;
 }
 
-input[type="submit"] {
+input[type="submit"],
+#return_button {
   padding: 5px 5px;
   background-color: #1385ff;
   color: #fff;
@@ -58,22 +59,7 @@ input[type="submit"] {
   border-radius: 5px;
 }
 
-input[type="submit"]:hover {
-  background-color: #0056b3;
-}
-
-#return_button{
-  padding: 5px 5px;
-  background-color: #1385ff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-family: "Arial", sans-serif;
-  margin-top: 20px;
-  font-size: 22px;
-  border-radius: 5px;
-}
-
+input[type="submit"]:hover,
 #return_button:hover {
   background-color: #0056b3;
 }
@@ -81,4 +67,11 @@ input[type="submit"]:hover {
 #return_button a {
   color: #fff;
   text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+  header img {
+    max-width: 500px;
+    max-height: 150px;
+  }
 }

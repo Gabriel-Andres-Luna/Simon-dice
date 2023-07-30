@@ -29,7 +29,8 @@
     <button id="start-button" class="start-button">
       <a href="fomr.html">CONTACT</a>
     </button>
-    <button id="start-button" class="start-button">DASHBOARD</button>
+    <button id="controls-button" class="start-button">CONTROLS</button>
+    <button id="dashboard-button" class="start-button">DASHBOARD</button>
   </div>
   <div id="userModal" class="userModal">
     <div class="usermodal-content">
@@ -47,6 +48,22 @@
       <p><strong>Tiempo:</strong> <span id="modal-time"></span>s</p>
       <p><strong>Puntaje:</strong> <span id="modal-score"></span></p>
       <button id="btnOk">OK</button>
+    </div>
+  </div>
+  <div id="controlsModal" class="controlsModal">
+    <div class="controlsModal-content">
+      <h2>Reglas y Controles del Juego "Simón Dice"</h2>
+      <p><strong>Bienvenido "Simón Dice", un emocionante juego de memoria y reflejos. El objetivo es seguir la secuencia de colores que "Simón" muestra y repetirlos correctamente para avanzar de nivel y obtener la mayor puntuación posible. Aquí están las reglas y controles para que puedas disfrutar al máximo del juego:</strong> <span id="modal-username"></span></p>
+      <p><strong>1- Haz clic en el botón "START" para comenzar el juego. Si es tu primera vez, te pedirá ingresar un nombre de usuario. Asegúrate de tener al menos 3 letras en tu nombre.</strong> <span id="modal-level"></span></p>
+      <p><strong>2- Simón mostrará una secuencia de colores iluminándolos uno tras otro. Presta mucha atención, ya que deberás repetir la misma secuencia después.</strong> <span id="modal-time"></span>s</p>
+      <p><strong>3- Después de que Simón muestre la secuencia, es tu turno. Haz clic en los colores en el mismo orden en que aparecieron. Si lo haces correctamente, avanzarás al siguiente nivel.</strong> <span id="modal-score"></span></p>
+      <p><strong>4- A medida que avanzas, el juego se vuelve más desafiante con secuencias más largas y rápidas. ¡Mantén la concentración y la agilidad para superar los niveles más altos!</strong> <span id="modal-score"></span></p>
+      <p><strong>5- Cada vez que repitas una secuencia correctamente, ganarás puntos. Tu puntaje se mostrará en la parte superior junto con el nivel actual y el tiempo transcurrido. Intenta obtener el puntaje más alto posible.</strong> <span id="modal-score"></span></p>
+      <button id="btnOkContorls">OK</button>
+    </div>
+  </div>
+  <div id="popup" class="popup">
+    <div class="popup-content">
     </div>
   </div>
   <script src="script.js"></script>
