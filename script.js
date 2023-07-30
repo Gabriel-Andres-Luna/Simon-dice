@@ -20,6 +20,7 @@ var popup = document.getElementById('popup');
 var time = 0;
 var level = 0;
 var score = 0;
+var lesspoints = 0;
 var gameStarted = false;
 var playerName = '';
 var timerInterval;
@@ -107,6 +108,7 @@ function buttonOn(color) {
 
 //Esta funcion guarda las variables del juego en LocalStorage.
 function savedata() {
+  lessscore();
   var playerData = {
     playerName: playerName,
     level: level,
@@ -128,6 +130,7 @@ function checkSequence() {
       return;
     }
     score++;
+    lessscore();
     updateScore();
   }
   if (playerSequence.length === gameSequence.length) {
@@ -176,6 +179,7 @@ function showLossModal() {
   var modalLevel = document.getElementById('modal-level');
   var modalTime = document.getElementById('modal-time');
   var modalScore = document.getElementById('modal-score');
+  lessscore();
   modalUsername.textContent = playerName;
   modalLevel.textContent = level;
   modalTime.textContent = time;
@@ -187,6 +191,13 @@ function showLossModal() {
 //Esta funcion updatea el nivel en pantalla.
 function updateLevel() {
   levelDisplay.textContent = level;
+}
+
+//Esta funcion resta puntos dependiendo del tiempo demorado.
+function lessscore() {
+  lesspoints = time * 0.05
+  score = score - lesspoints
+  score = parseFloat(score.toFixed(3));
 }
 
 //Esta funcion updatea el tiempo en pantalla.
