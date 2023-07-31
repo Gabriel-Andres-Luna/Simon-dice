@@ -16,6 +16,8 @@ body {
   margin-top: -50px;
 }
 
+.contact-button,
+.github-button,
 .start-button,
 .controls-button,
 button {
@@ -26,17 +28,15 @@ button {
   font-family: "Arial", sans-serif;
   margin-bottom: 12px;
   font-size: 22px;
+  text-decoration: none;
 }
 
+.contact-button:hover,
+.github-button:hover,
 .start-button:hover,
 .controls-button:hover,
 button:hover {
   background-color: #0056b3;
-}
-
-.start-button a {
-  color: #fff;
-  text-decoration: none;
 }
 
 .header {
@@ -175,7 +175,7 @@ button:hover {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  margin-top: -22px;
+  margin-top: -12px;
   color: #fff;
 }
 

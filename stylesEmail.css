@@ -47,7 +47,7 @@ textarea {
 }
 
 input[type="submit"],
-#return_button {
+.return_button {
   padding: 5px 5px;
   background-color: #1385ff;
   color: #fff;
@@ -57,10 +57,11 @@ input[type="submit"],
   margin-top: 20px;
   font-size: 22px;
   border-radius: 5px;
+  text-decoration: none;
 }
 
 input[type="submit"]:hover,
-#return_button:hover {
+.return_button:hover {
   background-color: #0056b3;
 }
 
