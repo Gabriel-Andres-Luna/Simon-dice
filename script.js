@@ -195,8 +195,8 @@ function updateLevel() {
 
 //Esta funcion resta puntos dependiendo del tiempo demorado.
 function lessscore() {
-  lesspoints = time * 0.05
-  score = score - lesspoints
+  lesspoints = time * 0.05;
+  score = score - lesspoints;
   score = parseFloat(score.toFixed(3));
 }
 
@@ -236,25 +236,24 @@ function showLeaderboard() {
   var leaderboardContent = document.createElement('div');
   leaderboardContent.classList.add('leaderboard-container');
   var leaderboardTable = document.createElement('table');
-  leaderboardTable.innerHTML = `
-    <tr>
-      <th>Username</th>
-      <th>Level</th>
-      <th>Score</th>
-      <th>Date</th>
-    </tr>
-  `;
+  leaderboardTable.innerHTML = '<tr>' +
+    '<th>Username</th>' +
+    '<th>Level</th>' +
+    '<th>Score</th>' +
+    '<th>Date</th>' +
+    '</tr>';
+
   for (var i = 0; i < allPlayerData.length; i++) {
     var playerEntry = document.createElement('tr');
-    playerEntry.innerHTML = `
-      <td>${allPlayerData[i].playerName}</td>
-      <td>${allPlayerData[i].level}</td>
-      <td>${allPlayerData[i].score}</td>
-      <td>${allPlayerData[i].date}</td>
-    `;
+    playerEntry.innerHTML = '<td>' + allPlayerData[i].playerName + '</td>' +
+      '<td>' + allPlayerData[i].level + '</td>' +
+      '<td>' + allPlayerData[i].score + '</td>' +
+      '<td>' + allPlayerData[i].date + '</td>';
     leaderboardTable.appendChild(playerEntry);
   }
+
   leaderboardContent.appendChild(leaderboardTable);
+  var popup = document.querySelector('.popup');
   popup.querySelector('.popup-content').innerHTML = '';
   popup.querySelector('.popup-content').appendChild(leaderboardContent);
 }
