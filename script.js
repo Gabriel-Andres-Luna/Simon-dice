@@ -242,7 +242,6 @@ function showLeaderboard() {
     '<th>Score</th>' +
     '<th>Date</th>' +
     '</tr>';
-
   for (var i = 0; i < allPlayerData.length; i++) {
     var playerEntry = document.createElement('tr');
     playerEntry.innerHTML = '<td>' + allPlayerData[i].playerName + '</td>' +
@@ -251,7 +250,6 @@ function showLeaderboard() {
       '<td>' + allPlayerData[i].date + '</td>';
     leaderboardTable.appendChild(playerEntry);
   }
-
   leaderboardContent.appendChild(leaderboardTable);
   var popup = document.querySelector('.popup');
   popup.querySelector('.popup-content').innerHTML = '';

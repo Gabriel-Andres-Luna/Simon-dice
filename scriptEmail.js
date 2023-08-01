@@ -13,6 +13,8 @@ function Send(event) {
 
 //Ejecuto la app predetermindada del sistema operativo para mandar email.
 function sendEmail(name, email, message) {
-  var mailtoLink = `mailto:${email}?subject=${encodeURIComponent(`Mensaje de ${name}`)}&body=${encodeURIComponent(message)}`;
+  var subject = 'Mensaje de ' + encodeURIComponent(name);
+  var body = encodeURIComponent(message);
+  var mailtoLink = 'mailto:' + email + '?subject=' + subject + '&body=' + body;
   window.location.href = mailtoLink;
 }
